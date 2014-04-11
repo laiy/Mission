@@ -252,4 +252,6 @@ document.getElementById("change-data").addEventListener('click', changeData);
 
 window.onload = function() {
   move();
+  control = document.getElementById('control');
+  control.style.marginLeft = maxWidth + "px";
 };
