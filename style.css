@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Microsoft YaHei','Helvetica Neue', Helvetica, Arial, Verdana,  "Hiragino Sans GB", STHeiti, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+  width: 250px;
+  height: 27px;
+  font-size: 18px;
+  color: #000;
+  background-color: #FFF;
+  display: block;
+}
+
+button {
+  font-size: 18px;
+  color: #000;
+  background-color: grey;
+  width: 250px;
+  height: 50px;
+  display: block;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #FFF;
+  box-shadow: 0 0 10px #FFF,
+              0 0 20px #FFF,
+              0 0 30px #FFF,
+              0 0 40px #130F0E;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.control {
+  float: right;
+  height: 100%;
+  background-color: #000;
+}
+
+.demonstration {
+  width: 250px;
+  height: 27px;
+  font-size: 18px;
+  color: #000;
+  background-color: grey;
+  display: block;
+}
