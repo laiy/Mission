@@ -81,19 +81,35 @@ function collision() {
 
     if (ballObjects[i].mleft <= 0) {
       ballObjects[i].vdx = Math.abs(ballObjects[i].vdx);
-      ballObjects[i].vdx -= collisionLoss;
+      if (ballObjects[i].vdx - collisionLoss > 0) {
+        ballObjects[i].vdx -= collisionLoss;
+      } else {
+        ballObjects[i].vdx = 0;
+      }
     }
     if (ballObjects[i].mtop <= 0) {
       ballObjects[i].vdy = -Math.abs(ballObjects[i].vdy);
-      ballObjects[i].vdy += collisionLoss;
+      if (ballObjects[i].vdy + collisionLoss < 0) {
+        ballObjects[i].vdy += collisionLoss;
+      } else {
+        ballObjects[i].vdy = 0;
+      }
     }
     if (maxHeight - ballObjects[i].mtop - 50 <= 0) {
       ballObjects[i].vdy = Math.abs(ballObjects[i].vdy);
-      ballObjects[i].vdy -= collisionLoss;
+      if (ballObjects[i].vdy - collisionLoss > 0) {
+        ballObjects[i].vdy -= collisionLoss;
+      } else {
+        ballObjects[i].vdy = 0;
+      }
     }
     if (maxWidth - ballObjects[i].mleft - 50 <= 0) {
       ballObjects[i].vdx = -Math.abs(ballObjects[i].vdx);
-      ballObjects[i].vdx += collisionLoss;
+      if (ballObjects[i].vdx + collisionLoss < 0) {
+        ballObjects[i].vdx += collisionLoss;
+      } else {
+        ballObjects[i].vdx = 0;
+      }
     }
   }
   //球-边框碰撞
@@ -124,24 +140,56 @@ function collision() {
           ballObjects[j].vdx = (v1x * Math.pow(detax, 2) + v2x * Math.pow(detay, 2) - (v2y - v1y) * detax * detay) / denominator;
           ballObjects[j].vdy = (v1y * Math.pow(detay, 2) + v2y * Math.pow(detax, 2) - (v2x - v1x) * detax * detay) / denominator;
           if (ballObjects[k].vdx >= 0) {
-            ballObjects[k].vdx -= collisionLoss;
+            if (ballObjects[k].vdx - collisionLoss > 0) {
+              ballObjects[k].vdx -= collisionLoss;
+            } else {
+              ballObjects[k].vdx = 0;
+            }
           } else {
-            ballObjects[k].vdx += collisionLoss;
+            if (ballObjects[k].vdx + collisionLoss < 0) {
+              ballObjects[k].vdx += collisionLoss;
+            } else {
+              ballObjects[k].vdx = 0;
+            }
           }
           if (ballObjects[k].vdy >= 0) {
-            ballObjects[k].vdy -= collisionLoss;
+            if (ballObjects[k].vdy - collisionLoss > 0) {
+              ballObjects[k].vdy -= collisionLoss;
+            } else {
+              ballObjects[k].vdy = 0;
+            }
           } else {
-            ballObjects[k].vdy += collisionLoss;
+            if (ballObjects[k].vdy + collisionLoss < 0) {
+              ballObjects[k].vdy += collisionLoss;
+            } else {
+              ballObjects[k].vdy = 0;
+            }
           }
           if (ballObjects[j].vdx >= 0) {
-            ballObjects[j].vdx -= collisionLoss;
+            if (ballObjects[j].vdx - collisionLoss > 0) {
+              ballObjects[j].vdx -= collisionLoss;
+            } else {
+              ballObjects[j].vdx = 0;
+            }
           } else {
-            ballObjects[j].vdx += collisionLoss;
+            if (ballObjects[j].vdx + collisionLoss < 0) {
+              ballObjects[j].vdx += collisionLoss;
+            } else {
+              ballObjects[j].vdx = 0;
+            }
           }
           if (ballObjects[j].vdy >= 0) {
-            ballObjects[j].vdy -= collisionLoss;
+            if (ballObjects[j].vdy - collisionLoss > 0) {
+              ballObjects[j].vdy -= collisionLoss;
+            } else {
+              ballObjects[j].vdy = 0;
+            }
           } else {
-            ballObjects[j].vdy += collisionLoss;
+            if (ballObjects[j].vdy + collisionLoss < 0) {
+              ballObjects[j].vdy += collisionLoss;
+            } else {
+              ballObjects[j].vdy = 0;
+            }
           }
           collisionDetector[k][j].onCollide = true;
           collisionDetector[j][k].onCollide = true;
