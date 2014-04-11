@@ -169,7 +169,6 @@ function addBall() {
     collisionDetector[o][count] = new Array();
     collisionDetector[o][count] = new detector();
   }
-  console.log(collisionDetector)
   ballObjects[count] = new Ball();
   if (dataRecived) {
     ballObjects[count].vdx = vx;
