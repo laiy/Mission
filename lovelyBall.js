@@ -48,8 +48,8 @@ function move() {
     sy = ballObjects[i].vdy * 0.3;
     ballObjects[i].mleft += sx;
     ballObjects[i].mtop -= sy;
-    balls[i].style.marginTop = parseInt(ballObjects[i].mtop) + "px";
-    balls[i].style.marginLeft = parseInt(ballObjects[i].mleft) + "px";
+    balls[i].style.top = parseInt(ballObjects[i].mtop) + "px";
+    balls[i].style.left = parseInt(ballObjects[i].mleft) + "px";
     ballObjects[i].vdy -= gravity * 0.1;
     ballObjects[i].vdx += airResistanceL * 0.3;
     ballObjects[i].vdy += airResistanceT * 0.3;
@@ -227,8 +227,8 @@ function addBall() {
   var location = [];
   for (var o = 0; o < count; o++) {
     location[o] = new Location();
-    location[o].l = balls[o].style.marginLeft;
-    location[o].t = balls[o].style.marginTop;
+    location[o].l = balls[o].style.left;
+    location[o].t = balls[o].style.top;
   }
   var numberAllRight = false;
   while (!numberAllRight) {
@@ -255,8 +255,8 @@ function addBall() {
   var div = wrapper.appendChild(newNode);
   div.className = 'ball';
   div.setAttribute("name", "ball");
-  div.style.marginTop = randomNumbert + "px";
-  div.style.marginLeft = randomNumberl + "px";
+  div.style.top = randomNumbert + "px";
+  div.style.left = randomNumberl + "px";
   ballObjects[count].mleft = randomNumberl;
   ballObjects[count].mtop = randomNumbert;
   count++;
