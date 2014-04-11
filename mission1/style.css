@@ -50,10 +50,11 @@ button {
   overflow: hidden;
 }
 
-.control {
-  float: right;
-  height: 100%;
+#control {
   background-color: #000;
+  z-index: 10000;
+  position: absolute;
+  height: 100%;
 }
 
 .demonstration {
