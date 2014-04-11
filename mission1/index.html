@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>ly's mission1</title>
+  <meta charset='utf-8'/>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <div class="control">
+      <div class="demonstration">水平初速度:</div>
+      <textarea id="vx-data" placeholder="请输入水平初速度">50</textarea>
+      <div class="demonstration">竖直初速度:</div>
+      <textarea id="vy-data" placeholder="请输入竖直初速度">10</textarea>
+      <div class="demonstration">重力加速度:</div>
+      <textarea id="gravity-data" placeholder="请输入重力加速度">20</textarea>
+      <div class="demonstration">碰撞速度损失:</div>
+      <textarea id="speed-loss" placeholder="请输入碰撞速度损失">0.5</textarea>
+      <div class="demonstration">水平风力:</div>
+      <textarea id="airResistance-msg-l" placeholder="请输入水平风力">0</textarea>
+      <div class="demonstration">竖直风力:</div>
+      <textarea id="airResistance-msg-t" placeholder="请输入竖直风力">0</textarea>
+      <button id="change-data">update data</button>
+      <button id="start">start</button>
+      <button id="stop">stop</button>
+      <button id="new">new ball</button>
+      <button id="delete">delete</button>
+      <button id="shuffle">shuffle</button>
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="lovelyBall.js"></script>
+</body>
+</html>
