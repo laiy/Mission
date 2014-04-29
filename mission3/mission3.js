@@ -1,4 +1,4 @@
-util = {}; 
+util = {};
 util.type = function(obj) {
   var type = Object.prototype.toString.call(obj);
   var count = 8;
