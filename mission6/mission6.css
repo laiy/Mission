@@ -1,0 +1,41 @@
+.main-box {
+  width: 276px;
+  height: 70px;
+  overflow: hidden;
+  box-shadow: 10px 10px 10px #8c8c8c;
+}
+.main-box img {
+  float: left;
+  display: inline-block;
+  width: 70px;
+}
+.main-box div.user-msg {
+  float: left;
+  display: inline-block;
+  width: 130px;
+  padding-left: 20px;
+  padding-top: 12px;
+  font-size: 15px;
+  color: #8e8e8e;
+}
+.main-box div.user-msg .nickname {
+  font-weight: bold;
+  color: #000;
+}
+.main-box div.user-msg .sig {
+  display: block;
+  padding-top: 5px;
+}
+.main-box .right-img {
+  width: 16px;
+  padding-top: 5px;
+  display: inline-block;
+  float: right;
+  padding-right: 15px;
+}
+.main-box .right-img img {
+  float: left;
+  width: 16px;
+  height: 20px;
+  padding: 5px;
+}
